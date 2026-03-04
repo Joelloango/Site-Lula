@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Produits Locaux RDC</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<nav class="navbar">
+
+<h2 class="logo">Produits RDC</h2>
+
+<div class="hamburger" id="hamburger">
+☰
+</div>
+
+<ul class="menu" id="menu">
+<li><a href="#accueil">Accueil</a></li>
+<li><a href="#produits">Produits</a></li>
+<li><a href="#apropos">À propos</a></li>
+<li><a href="#temoignages">Témoignages</a></li>
+</ul>
+
+</nav>
+</header>
+
+<!-- SECTION ACCUEIL -->
+<section id="accueil" class="hero reveal">
+<section id="produits" class="reveal">
+<section id="apropos" class="reveal">
+<section id="temoignages" class="reveal">
+
+<img src="images/Logo joel.jpeg" alt="logo" class="hero-logo">
+
+<h1>Découvrez les meilleurs produits locaux</h1>
+<p>Produits authentiques, naturels et made in RDC.</p>
+
+<a href="https://wa.me/243815405578" class="btn">Commander sur WhatsApp</a>
+
+</section>
+
+<!-- SECTION PRODUITS -->
+<section id="produits">
+<h2>Nos Produits</h2>
+
+<div class="produits-container">
+
+<div class="produit">
+<img src="images/aliments.png" alt="Produit">
+<h3>Nom du produit</h3>
+<p>Description courte du produit.</p>
+<a href="https://wa.me/243815405578" class="btn">Commander</a>
+</div>
+
+<div class="produit">
+<img src="images/" alt="Produit">
+<h3>Nom du produit</h3>
+<p>Description courte du produit.</p>
+<a href="https://wa.me/243815405578" class="btn">Commander</a>
+</div>
+
+</div>
+</section>
+
+<!-- SECTION A PROPOS -->
+<section id="apropos">
+<h2>À propos</h2>
+<p>
+Nous valorisons les produits locaux de la RDC en proposant des produits de qualité,
+authentiques et accessibles à tous.
+</p>
+</section>
+
+<!-- SECTION TEMOIGNAGES -->
+<section id="temoignages">
+<h2>Témoignages</h2>
+
+<div class="temoignage">
+<p>"Très bons produits, qualité exceptionnelle !"</p>
+<strong>Client satisfait</strong>
+</div>
+
+</section>
+
+<!-- FOOTER -->
+<footer>
+<p>© 2026 Produits RDC — Tous droits réservés</p>
+</footer>
+
+<!-- BOUTON WHATSAPP FLOTTANT -->
+<a href="https://wa.me/243815405578" class="whatsapp-float">💬</a>
+
+<script>
+
+/* MENU MOBILE */
+const hamburger = document.getElementById("hamburger");
+const menu = document.getElementById("menu");
+
+hamburger.addEventListener("click", () => {
+menu.classList.toggle("active");
+});
+
+/* ANIMATION SCROLL */
+function reveal() {
+const reveals = document.querySelectorAll(".reveal");
+
+reveals.forEach(element => {
+const windowHeight = window.innerHeight;
+const elementTop = element.getBoundingClientRect().top;
+
+if(elementTop < windowHeight - 100){
+element.classList.add("active");
+}
+});
+}
+
+window.addEventListener("scroll", reveal);
+
+</script>
+
+</body>
+  </html>
